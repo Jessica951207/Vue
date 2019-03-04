@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="UTF-8">
+    <title>16万南航里程  海外机票随心兑</title>
+    <meta name="Keywords" content="">
+    <meta name="Description" content="">
+	<meta content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=2.0, user-scalable=no, width=device-width" name="viewport">
+    <link rel="stylesheet" href="fancybox/fancybox.css"  type="text/css" media="screen" />
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="fancybox/mousewheel.js"></script>
+    <script type="text/javascript" src="fancybox/fancyboxmin.js"></script>
+
+    <script type="text/javascript">
+		 function set_size() {
+            $("html").css({"font-size": $(window).width() >= 750 ? 16 : ($(window).width() / 750 * 22)})
+        }
+        $(window).resize(set_size);
+
+        $(document).ready(function(){	
+			set_size();
+			
+			 $.fn.setEqualHeight = function (ele) {
+                var maxHeight = 0, maxElement = null;
+                $(ele).css({
+                    "height": "auto"
+                });
+                $(ele).each(function () {
+                    if (($(this).height() + parseInt($(this).css("padding-bottom")) + parseInt($(this).css("padding-top"))) > maxHeight) {
+                        maxHeight = $(this).height() + parseInt($(this).css("padding-top")) + parseInt($(this).css("padding-bottom"));
+                        maxElement = this;
+                    }
+                });
+                $(ele).not($(maxElement)).each(function () {
+                    $(this).height(maxHeight - parseInt($(this).css("padding-top")) - parseInt($(this).css("padding-bottom")))
+                });
+            };
+ 
+            $(".content_detail").each(function () {
+                $("body").setEqualHeight($(".brand_height", this));
+            })
+			 $(".detail").each(function () {
+                $("body").setEqualHeight($(".content_height", this));
+            })
+			 $(".content_detail").each(function () {
+                $("body").setEqualHeight($(".brand_detail", this));
+            })
+			
+                        
+            $(".tip_popup").fancybox({
+                'titlePosition': 'inside',
+                'transitionIn': 'none',
+                'transitionOut': 'none'
+            });
+            
+            $('.popup_alert').fancybox({
+				scrolling: 'no',
+		        onStart: function (e) {
+		            $('#popuplink').attr('href', $(e).attr('link'));
+		            $('#popup').show();
+		        }, onClosed: function () {
+		            $('#popup').hide();
+		        }
+			});			
+			
+        });
+    </script>
+	<script type="text/javascript">
+		$(function(){
+			$('.tips_title').toggle(function(){
+				$('.tips').show();	
+				$(document).scrollTop(2200);
+				$('.tip_img').css("transform","rotateX(180deg)");
+			},function(){
+				$('.tips').hide();
+				$('.tip_img').css("transform","rotateX(0deg)");
+			});
+			
+			
+		});	
+	</script>
+    <style type="text/css">
+		.mb_show{display: none!important;}
+        *{margin: 0;padding: 0;}
+		a,area{outline: none;}
+        #outbox-ray{max-width:2400px;margin:0 auto;font-family: Arial, Microsoft YaHei, sans-serif;padding-bottom: 30px;background: url(images/map_01.png)}
+		.innerbox{max-width:2400px;margin:0 auto;font-family: Arial, Microsoft YaHei, sans-serif;}
+        .content-ray{width: 72%; margin: 0 auto;}
+		
+        .slogan{font-size: 24px;color:#8e6f32;text-align: center;line-height: 38px;margin-bottom: 55px;}
+        .slogan_title{padding-top:3%;}
+        .slogan span{color:#004187;}
+		
+		.content{position: relative;}
+		.content_right{width: 49%; max-width: 644px;}
+		.brand_intro{background-color: #002a54; color: #ffffff; font-size: 18px; line-height: 28px;}
+        .brand_intro .brand_text{padding: 47px 40px;}
+		.brand_intro .brand_text .brand_text1{font-size: 24px;color:#8e6f32; font-weight: bold;}
+		.brand_intro .brand_text p{margin-bottom: 10px}
+		.brand_height{margin-bottom: 20px;}
+		.brand_height u{}
+		.brand_intro .brand_text p.last{margin-bottom: 0}
+		.brand_intro .brand_text a{font-size: 14px;margin-right: 10px;text-decoration: none;color: #ffffff;}
+		.content_left{width: 49%;max-width: 644px;position: absolute;top: 0;right: 0;}		
+		.title{padding: 6% auto;}
+		
+		/*.line{border-bottom: 1px solid #8e6f32;height: 30px;margin-bottom: 2%;}*/
+		
+		.right{background-color: #8e6f32;}
+		.content table{ color: #ffffff;}
+		.content .p_style{line-height: 165%;margin: 5% 0;}
+		.content a{font-size: 14px;margin-right: 10px;text-decoration: none;color: #ffffff;}
+		
+		.tips_title{color: #ffffff;text-align: center;padding: 30px 0;background-color: #666666;}
+		.tips{font-size: 12px;color: #a5a5a5;margin-top: 100px;margin-bottom: 100px;line-height: 30px;display: none;}
+		.tips a{color: #a5a5a5;}
+        .clear{clear: both;}
+		
+		.top{position: relative;}		
+		.top_text{width: 100%; color: #163c6a;position: absolute;top: 3.5rem;left: 0;text-align: center;}
+		.top h1{font-size: 2rem;margin-bottom: 1%;}
+		.top p{font-size: 18px;font-weight: bold;}
+		.link{width: 12%;background-color: #ffffff;border-radius: 8px;text-align: center;display: inline-block;padding: 0.8% 0;margin-top: 1%;}
+		.top a{text-decoration: none;font-weight: bold;color: #163c6a;}
+				
+		.arrowMore{display: inline-block; vertical-align: middle;}
+		.td_width{width: 6%;}
+		.brand_detail{margin-bottom: 2%;}
+
+		@media screen and (max-width: 768px){
+			.pc_show{display: none !important;}
+			.mb_show{display: block!important;}
+			       
+        img{display: block; border: none; width: 100%;}
+        a{-webkit-tap-highlight-color: rgba(0,0,0,0);}
+        #outBox{width: 100%; max-width: 640px; margin: 0 auto; overflow: hidden; position: relative;}
+        #rule{display: block; text-decoration: underline; outline: none; float: right; margin: 3% 0 5% 0; color: #595757; font-size: 0.8rem;}
+        .content-ray{width: 94%; margin: 0 auto;}
+		
+		
+        .slogan{font-size: 1.45rem;color:#8e6f32;text-align: center;margin-bottom: 6%;}
+        .slogan_title{padding-top: 5%;}
+        .slogan span{color:#004187;}		
+		
+		.brand_intro{background-color: #002a54; color: #ffffff; font-size: 1.2rem; line-height: 28px;}
+        .brand_intro .brand_text{padding: 8% 6% 6% 6%;}
+		.brand_intro .brand_text .brand_text1{font-size: 1.45rem;color:#8e6f32; font-weight: bold;margin-bottom: 8%;}
+		.brand_intro .brand_text p{margin-bottom: 4%;}
+		.brand_intro .brand_text a{font-size: 1rem;;text-decoration: none;color: #ffffff;}
+		.brand_text{position: relative;}
+		.brand_img1{position: absolute;bottom: 14.5%; left: 35%;}
+		.brand_img2{position: absolute;bottom: 12.5%; left: 35%;}
+		.content_one{padding-bottom: 5%;}
+		.brand_margin{margin-bottom: 3%!important;}
+		.line{border-bottom: 1px solid #8e6f32;height: 2.2rem;width: 91%;margin-bottom: 2%;}
+		
+		.title{padding-top: 8%;margin-bottom: 12%;}
+		.content_two{background: #8e6f32;color: #ffffff;position: relative;margin-bottom: 5%;}
+		.content_two a{color: #ffffff;text-decoration: none;font-size: 1rem;}
+		.content_txt{padding: 8% 5%;}
+		.content_txt h2{margin-bottom: 3%;}
+		.content_txt p{line-height: 2rem;margin-bottom: 5%;font-size: 1.2rem;}
+		.content_img{position: absolute;bottom: 11%;left: 28%;}
+		
+		.tips_title{color: #ffffff;text-align: center;padding: 5% 0;background-color: #666666;font-size: 1.2rem;position: relative;}
+		.tip_img{position: absolute;top: 46%;left: 65%;}
+		.tips{width: 90%; font-size: 1rem;color: #a5a5a5;margin-top: 8%;margin-bottom: 8%;line-height: 30px;display: none;padding-left: 7%;padding-right: 7%;}
+		.tips a{color: #a5a5a5;}
+		.bgm1{position: relative;width: 100%;background: url(images/map_mb_01.png);}
+		.img1{width: 35%;position: absolute;right: 0;top: 6.5%;}
+		.bmg2{position: relative;width: 100%;background: url(images/map_mb_01.png);}
+		.img2{width: 40%;position: absolute;top: 8%;}
+		}
+		
+        @media screen and (min-width: 769px) and (max-width: 1368px){
+            .p_style{font-size: 0.9rem;}
+			.brand_intro .brand_text .brand_text1{font-size: 1.3rem;}
+			.brand_intro .brand_text p.last{font-size: 1rem;}
+			.brand_height{font-size: 1rem;}
+			.h2_title{font-size: 1.3rem;}
+			.content-ray{width: 88%;}
+			.td_width{width: 2%;}
+			.brand_detail span{font-size: 1rem;}
+        }
+		
+		
+		
+    </style>
+</head>
+<body>
+    <div id="outbox-ray" class="pc_show">    
+		<img src="images/southern_airlines_01.jpg" alt="16万南航里程  海外机票随心兑" width="100%" style="display:block;border:none;">
+        <div class="top">
+			<img src="images/southern_airlines_bannner.jpg" alt="16万南航里程  海外机票随心兑" width="100%" >
+			<div class="top_text">
+				<h1>16万南航里程  海外机票随心兑</h1>
+				<p>成为花旗财富管理客户</p>
+				<a href="/sim/land/banking/OnlineAppointment.html?code=PATVCSAPC" target="_blank">
+					<div class="link">立即预约</div>
+				</a>
+			</div>			
+		</div>
+        <div class="content-ray">			
+            <div class="slogan slogan_title">
+                <p>即日起至2019年12月31日</p>
+                <p>优惠名额限量100份</p>
+            </div>            
+
+			<div class="content content_detail">
+				<div class="content_right">
+					<img src="images/southern_airlines_05.jpg" alt="" width="100%" style="display:block;border:none;">
+					<div class="brand_intro">
+						<div class="brand_text">
+							<div class="brand_detail">
+								<p class="brand_text1">立享6万南航明珠俱乐部里程！</p>
+							</div>
+							<div class="brand_height">
+								<p class="last">立即成为花旗财富管理客户，且持续4个月满足合格花旗财富管理账户标准。</p>
+							</div>
+							<a href="pdf/southern_airlines_TC.pdf" target="_blank">了解更多活动详情</a>
+							<img class="arrowMore" src="images/arrow.png" alt="">
+						</div>
+					</div>
+				</div>			
+				<div class="content_left">
+					<img src="images/southern_airlines_07.jpg" alt="" width="100%" style="display:block;border:none;">
+					<div class="brand_intro">
+						<div class="brand_text">
+							<div class="brand_detail">
+								<p class="brand_text1">最高可享10万花旗礼程！</p>
+								<u style="color:#b4975a;"><span style="color: #fff;">10万花旗礼程可兑换10万南航明珠俱乐部里程！</span></u>
+							</div>							
+							<div class="brand_height">								
+								<p class="p_margin last">持续满足合格花旗财富管理账户标准且持有花旗礼程卡信用卡。</p>				
+							</div>
+							<a href="/sim/land/mile/index.html" target="_blank">了解更多活动详情</a>
+							<img class="arrowMore"  src="images/arrow.png" alt="">							
+						</div>
+					</div>
+				</div>
+				<div class="clear"></div>
+			</div>
+			
+			<div class="slogan title">
+                <p>花旗银行客户更可尊享</p>
+            </div> 		
+						
+			<div class="content detail">
+				<table cellpadding="0" cellspacing="0" border="0" width="100%">					
+					<tr>
+						<td width="46%">
+							<table cellpadding="0" cellspacing="0" border="0" width="100%" class="right">
+								<tr><td height="20"></td></tr>
+								<tr>									
+									<td width="22%" align="center">
+										<img src="images/icon_01.png" alt="" style="display:block;border:none;" width="50%">
+									</td>									
+									<td>
+										<img src="images/line.png" alt="" height="100%" style="display:block;border:none;">
+									</td>									
+									<td style="padding: 0 5%;">
+										<h2 class="h2_title">环球旅行 伴您左右</h2>
+										<p class="p_style content_height">海外机场中文免费接送机，在境外既安心又省心<br>
+											全球ATM免费取现，让出国真的说走就走<br>
+											海外紧急援助现金，一解你的燃眉之急<br>
+											全球速汇通，快速到账让爱零距离
+										</p>
+										<a href="/sim/chinese/citigold/banking-privileges-global-advantage.htm" target="_blank">了解更多详情</a>
+										<img class="arrowMore" src="images/arrow_01.png" alt="">	
+									</td>
+								</tr>
+								<tr><td height="20"></td></tr>
+							</table>
+						</td>	
+						<td class="td_width"></td>
+						<td width="46%">
+							<table cellpadding="0" cellspacing="0" border="0" width="100%" class="right">
+								<tr><td height="20"></td></tr>
+								<tr>									
+									<td width="22%" align="center">
+										<img src="images/icon_02.png" alt="" style="display:block;border:none;"  width="50%">
+									</td>									
+									<td>
+										<img src="images/line.png" alt="" height="100%" style="display:block;border:none;">
+									</td>									
+									<td style="padding: 0 5%;">
+										<h2 class="h2_title">财富管理 由您诠释</h2>
+										<p class="p_style content_height">代理境外理财—海外基金系列<br>
+											多币种定期存款<br>
+											个人大额存单<br>
+											代销保险
+										</p>
+										<a href="/sim/chinese/citigold/wealth-management-solutions.htm" target="_blank">了解更多详情</a>
+										<img class="arrowMore" src="images/arrow_01.png" alt="">	
+									</td>
+								</tr>
+								<tr><td height="20"></td></tr>
+							</table>
+						</td>
+					</tr>					
+				</table>				
+			</div>	
+			
+			<div class="slogan title">
+                <p>更多活动详情，欢迎咨询花旗24小时服务热线 400-821-1880</p>
+            </div> 	
+        </div>
+		 
+    </div>
+	
+	
+	<div class="innerbox pc_show">
+		<div class="tips_title">
+			<span>活动规则与条款</span>
+			<img src="images/arrow_02.png" alt="" class="tip_img">
+		</div>
+		<div class="content-ray tips">
+			<ol>
+				<li>活动时间：2019年1月1日起至2019年12月31日（含起讫日）</li>
+				<li>参与商户：中国南方航空股份有限公司</li>
+				<li>活动对象：仅限于在活动期间通过南方航空官方微信、南方航空官方网站等等商户活动专属链接申请并开立花旗财富管理账户的客户参加。本活动不与其它优惠活动同享。已持有花旗银行借记卡账户或曾在花旗银行关户的客户不可参与此活动。</li>
+				<li>活动适用范围：仅适用于花旗银行位于北京、上海、广州、深圳、杭州、成都、重庆、大连的分支机构。</li>
+				<li>活动规则：在活动期间，客户通过活动专属链接成为合格花旗财富管理客户，且满足合格花旗财富管理账户标准连续满4个月，该客户可在商户获得60000南航明珠里程。南航明珠里程具体使用规则以商户公布为准。</li>
+				<li>奖励发放：对于符合活动条件的客户，商户将在其满足活动条件后的三个月内将商户礼品发送至客户在申请参与活动时通过专属链接预留的南航明珠俱乐部会员卡号中（如南航明珠俱乐部会员卡号变更，客户应及时通知银行，以免影响礼品领取）。礼品具体使用方法和使用规则以商户公布为准，花旗银行不对与礼品及其使用相关的事项提供任何保证或承担任何责任。</li>
+				<li>合格花旗财富管理账户标准：指当月综合账户总额日平均余额不低于人民币100万元（或等值外币）。综合账户总额日均余额的计算为：同一客户号码项下的所有个人及联名账户（联名账户的账户余额仅计入主账户人名下）当月内每日存款、投资及指定保险产品的累积余额*的总和，除以当月实际天数得到的平均数。指定保险产品包含非投资连结及投资连结的保险产品。<br>*非投资连结保险产品的累积余额为已缴保险费；投资连结的保险产品的累积余额为保单当月的余额。</li>
+				<li>新开户的花旗财富管理客户在开户后可享受6个月的缓冲期（“缓冲期”）。该缓冲期内本行将不收取账户管理费（开户当月即视为第一个月），缓冲期结束后将按照届时最新的费率表中的账户管理费收费标准进行收费。详情请登录花旗网上银行查阅个人银行业务费率表<a href="https://www.citibank.com.cn/sim/chinese/static/rates_fees.htm">https://www.citibank.com.cn/sim/chinese/static/rates_fees.htm</a>。</li>
+				<li>本活动礼品不可兑换现金或换取其他优惠，不可转让予其他人。</li>
+				<li>客户如有任何虚假交易、违法交易、不正常交易等情况，或财富管理账户在非正常状态（如销户账户和被冻结账户），花旗银行有权取消其参加本活动的资格。如客户在活动期间或获得活动优惠后发生任何欺诈或恶意套取活动优惠等行为，我行有权取消其获得优惠的资格，并从其在我行的任何银行卡和/或账户中扣除与其所获得的优惠等值金额的款项。</li>
+				<li>本活动中有关商品或服务由相关商户提供。除适用法律另有规定外，花旗银行不负责与礼品质量、使用、维修及版权有关的事宜，任何有关礼品的产品质量、使用、维修及版权之责任由商户承担。客户应自行决定是否使用该商户提供的商品或服务，并应自行承担使用该商品或服务的后果。若客户因使用有关商品或服务引起任何损害的，客户应自行直接接洽该商户予以处理和解决。除适用法律另有规定外，花旗银行不对该商户提供的商品或服务的质量提供任何保证或承担任何责任，但会视具体情况提供必要协助。</li>
+				<li>在法律允许的范围内，花旗银行有权解释、修改本活动规则、暂停或提前终止本活动。本活动任何未尽事宜仍受《金融产品及服务条款和条件》以及其他相关文件约束。</li>
+				<li>本条款所述“花旗”或“银行”或“花旗银行”均指花旗银行（中国）有限公司。</li>
+			</ol>
+		</div>
+	</div>
+    
+
+	
+<div id="outBox"  class="mb_show">    
+    <img src="images/southern_airlines_mb_01.jpg" alt="16万南航里程  海外机票随心兑" width="750" style="display:block;border:none;">
+	<a href="/sim/land/banking/OnlineAppointment.html?code=PATVCSAPC">
+		<img src="images/southern_airlines_mb_02.jpg" alt="16万南航里程  海外机票随心兑" width="750" style="display:block;border:none;">
+	</a>
+	
+<div class="bgm1">
+    <div class="content-ray"> 	
+        <div class="slogan slogan_title">
+            <p>即日起至2019年12月31日</p>
+            <p>优惠名额限量100份</p>
+        </div>  
+		<img src="images/southern_airlines_mb_09.png" alt="" class="img1">
+		<div class="content_one">
+			<img src="images/southern_airlines_mb_05.jpg" alt="">
+			<div class="brand_intro">
+				<div class="brand_text">
+					<h2 class="brand_text1">立享6万南航明珠俱乐部里程！</h2>
+					<p>立即成为花旗财富管理客户，且持续4个月满足合格花旗财富管理账户标准。</p>
+					<a href="pdf/southern_airlines_TC.pdf">了解更多活动详情</a>
+					<img class="brand_img1" src="images/arrow.png" alt="" style="width: 2%;">
+				</div>
+			</div>
+		</div>
+		<div class="content_one" style="padding-bottom: 0;">
+			<img src="images/southern_airlines_mb_08.jpg" alt="">
+			<div class="brand_intro">
+				<div class="brand_text">
+					<h2 class="brand_text1 brand_margin">最高可享10万花旗礼程！</h2>
+					<div class="line">
+						<p>10万花旗礼程可兑换10万南航明珠俱乐部里程！</p>
+					</div>
+					<p>持续满足合格花旗财富管理账户标准且持有花旗礼程卡信用卡。</p>							
+					<a href="/sim/land/mile/index.html">了解更多活动详情</a>
+					<img class="brand_img2" src="images/arrow.png" alt="" style="width: 2%;">
+				</div>
+			</div>
+		</div>		
+        <div class="clear"></div>		
+	</div>
+</div>
+	
+<div class="bmg2">
+	<div class="content-ray"> 	
+		<div class="slogan title">
+            <p>花旗银行客户更可尊享</p>
+        </div> 
+		<img src="images/southern_airlines_mb_10.png" alt="" class="img2">
+		<div class="content_two">
+			<img src="images/icon_01.png" alt="" style="width: 8%;margin: 0 auto;padding: 5% 0;">
+			<img src="images/line_02.png" alt="" style="width: 90%; padding-left: 5%;">		
+			<div class="content_txt">
+				<h2>环球旅行 伴您左右</h2>
+				<p>海外机场中文免费接送机，在境外既安心又省心<br>
+					全球ATM免费取现，让出国真的说走就走<br>
+					海外紧急援助现金，一解你的燃眉之急<br>
+					全球速汇通，快速到账让爱零距离
+				</p>
+				<a href="/sim/chinese/citigold/banking-privileges-global-advantage.htm">了解更多详情</a>
+				<img class="content_img" src="images/arrow_01.png" alt="" style="width: 2%;">
+			</div>
+		</div>
+		<div class="content_two">
+			<img src="images/icon_02.png" alt="" style="width: 8%;margin: 0 auto;padding: 5% 0;">
+			<img src="images/line_02.png" alt="" style="width: 90%;padding-left: 5%;">		
+			<div class="content_txt">
+				<h2>财富管理 由您诠释</h2>
+				<p>代理境外理财—海外基金系列<br>
+				多币种定期存款<br>
+				个人大额存单<br>
+				代销保险
+				</p>
+				<a href="/sim/chinese/citigold/wealth-management-solutions.htm">了解更多详情</a>
+				<img class="content_img" src="images/arrow_01.png" alt="" style="width: 2%;">
+			</div>
+		</div>
+		<div class="slogan title">
+              <p>更多活动详情，欢迎咨询<br>花旗24小时服务热线 400-821-1880</p>
+        </div>
+    </div>
+</div>
+
+	<div class="innerbox">
+		<div class="tips_title">
+			<span>活动规则与条款</span>
+			<img src="images/arrow_02.png" alt="" style="width: 4%" class="tip_img">
+		</div>
+		<div class="tips">
+			<ol>
+				<li>活动时间：2019年1月1日起至2019年12月31日（含起讫日）</li>
+				<li>参与商户：中国南方航空股份有限公司</li>
+				<li>活动对象：仅限于在活动期间通过南方航空官方微信、南方航空官方网站等等商户活动专属链接申请并开立花旗财富管理账户的客户参加。本活动不与其它优惠活动同享。已持有花旗银行借记卡账户或曾在花旗银行关户的客户不可参与此活动。</li>
+				<li>活动适用范围：仅适用于花旗银行位于北京、上海、广州、深圳、杭州、成都、重庆、大连的分支机构。</li>
+				<li>活动规则：在活动期间，客户通过活动专属链接成为合格花旗财富管理客户，且满足合格花旗财富管理账户标准连续满4个月，该客户可在商户获得60000南航明珠里程。南航明珠里程具体使用规则以商户公布为准。</li>
+				<li>奖励发放：对于符合活动条件的客户，商户将在其满足活动条件后的三个月内将商户礼品发送至客户在申请参与活动时通过专属链接预留的南航明珠俱乐部会员卡号中（如南航明珠俱乐部会员卡号变更，客户应及时通知银行，以免影响礼品领取）。礼品具体使用方法和使用规则以商户公布为准，花旗银行不对与礼品及其使用相关的事项提供任何保证或承担任何责任。</li>
+				<li>合格花旗财富管理账户标准：指当月综合账户总额日平均余额不低于人民币100万元（或等值外币）。综合账户总额日均余额的计算为：同一客户号码项下的所有个人及联名账户（联名账户的账户余额仅计入主账户人名下）当月内每日存款、投资及指定保险产品的累积余额*的总和，除以当月实际天数得到的平均数。指定保险产品包含非投资连结及投资连结的保险产品。<br>*非投资连结保险产品的累积余额为已缴保险费；投资连结的保险产品的累积余额为保单当月的余额。</li>
+				<li>新开户的花旗财富管理客户在开户后可享受6个月的缓冲期（“缓冲期”）。该缓冲期内本行将不收取账户管理费（开户当月即视为第一个月），缓冲期结束后将按照届时最新的费率表中的账户管理费收费标准进行收费。详情请登录花旗网上银行查阅个人银行业务费率表<a href="https://www.citibank.com.cn/sim/chinese/static/rates_fees.htm">https://www.citibank.com.cn/sim/chinese/static/rates_fees.htm</a>。</li>
+				<li>本活动礼品不可兑换现金或换取其他优惠，不可转让予其他人。</li>
+				<li>客户如有任何虚假交易、违法交易、不正常交易等情况，或财富管理账户在非正常状态（如销户账户和被冻结账户），花旗银行有权取消其参加本活动的资格。如客户在活动期间或获得活动优惠后发生任何欺诈或恶意套取活动优惠等行为，我行有权取消其获得优惠的资格，并从其在我行的任何银行卡和/或账户中扣除与其所获得的优惠等值金额的款项。</li>
+				<li>本活动中有关商品或服务由相关商户提供。除适用法律另有规定外，花旗银行不负责与礼品质量、使用、维修及版权有关的事宜，任何有关礼品的产品质量、使用、维修及版权之责任由商户承担。客户应自行决定是否使用该商户提供的商品或服务，并应自行承担使用该商品或服务的后果。若客户因使用有关商品或服务引起任何损害的，客户应自行直接接洽该商户予以处理和解决。除适用法律另有规定外，花旗银行不对该商户提供的商品或服务的质量提供任何保证或承担任何责任，但会视具体情况提供必要协助。</li>
+				<li>在法律允许的范围内，花旗银行有权解释、修改本活动规则、暂停或提前终止本活动。本活动任何未尽事宜仍受《金融产品及服务条款和条件》以及其他相关文件约束。</li>
+				<li>本条款所述“花旗”或“银行”或“花旗银行”均指花旗银行（中国）有限公司。</li>
+			</ol>
+		</div>
+	</div>   
+       
+
+</div>
+
+
+    <div id="popup" style="display:none; overflow:hidden;">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+            <tr align="left" valign="top">
+                <td style="font-size:12px;font-family:Arial;"><span style="color:#06c">您即将离开花旗网站，前往第三方网站。</span><br>
+                    You are now entering a third party site.</td>
+            </tr>
+            <tr align="left" valign="top">
+                <td class="font">&nbsp;</td>
+            </tr>
+            <tr align="left" valign="top">
+                <td style="line-height:150%;font-size:12px;font-family:Arial;"><span style="color:#06c">所有您在第三方网站提交的信息将由该网站依据其隐私、保密和安全条款执行并负责。</span><br>
+                    All information you provide there will be subject to privacy, confidentiality, and security terms of the applicable third party site.</td>
+            </tr>
+            <tr align="left" valign="top">
+                <td class="font">&nbsp;</td>
+            </tr>
+
+            <tr align="left" valign="top">
+                <td class="font"><hr size="1" color="CCCCCC" width="100%"></td>
+            </tr>
+            <tr align="center" valign="top">
+                <td class="font">
+                    <a id="popuplink" href="#" onClick="javascript:$.fancybox.close();" target="_blank" class="button" style="float:left;margin-left:20%;font-family:Arial;font-size:9pt;font-weight:bolder;color:#fff;width:40px;height:12pt;background-color:#009;border:1px solid #09f;display:block;padding-top:1px; margin-top: 10px;">Yes</a>
+                    <a href="javascript:$.fancybox.close();" class="button" style="float:right;margin-right:20%;font-family:Arial;font-size:9pt;font-weight:bolder;color:#fff;width:40px;height:12pt;background-color:#009;border:1px solid #09f;display:block;padding-top:1px; margin-top: 10px;">No</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+<!--<script type="text/javascript">
+    function IsPC()
+    {
+        var userAgentInfo = navigator.userAgent;
+        var Agents = new Array("Android", "iPhone", "SymbianOS", "Windows Phone", "iPad", "iPod");
+        var flag = true;
+        for (var v = 0; v < Agents.length; v++) {
+            if (userAgentInfo.indexOf(Agents[v]) > 0) { flag = false; break; }
+        }
+        return flag;
+    }
+
+
+    function gup(name) {
+        name = name.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
+        var regexS = "[\\?&]"+name+"=([^&#]*)";
+        var regex = new RegExp( regexS );
+        var results = regex.exec( window.location.href );
+        if( results == null )
+            return "";
+        else
+            return results[1];
+    }
+
+
+    if(!IsPC()){
+        window.location.href="southern_airlines_mb.html"
+    };
+
+</script>-->
+
+<script language="JavaScript" type="text/javascript" src="/sim/chinese/js/SC_code1.js"></script>
+<script language="JavaScript" type="text/javascript" src="/sim/chinese/js/page_code.js"></script>
+</html>

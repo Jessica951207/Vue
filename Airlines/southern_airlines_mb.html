@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="UTF-8">
+    <title>16万南航里程  海外机票随心兑</title>
+    <meta name="Keywords" content="">
+    <meta name="Description" content="">
+    <meta content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=2.0, user-scalable=no, width=device-width" name="viewport">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <link rel="stylesheet" href="fancybox/fancybox.css"  type="text/css" media="screen" />
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="fancybox/mousewheel.js"></script>
+    <script type="text/javascript" src="fancybox/fancyboxmin.js"></script>
+    <script type="text/javascript">
+        function set_size() {
+            $("html").css({"font-size": $(window).width() >= 750 ? 22 : ($(window).width() / 750 * 22)})
+        }
+        $(window).resize(set_size);
+
+        $(document).ready(function(){
+            var sh = $(window).height();
+            var i=0;
+            set_size();
+
+            $('#inline1').height(sh*0.7);
+            $(".Tips").fancybox({
+                'titlePosition': 'inside',
+                'transitionIn': 'none',
+                'transitionOut': 'none'
+            });
+            $('.popup_alert').fancybox({
+                scrolling: 'no',
+                onStart: function (e) {
+                    $('#popuplink').attr('href', $(e).attr('link'));
+                    $('#popup').show();
+                }, onClosed: function () {
+                    $('#popup').hide();
+                }
+            });
+
+        });
+    </script>
+	<script type="text/javascript">
+		$(function(){
+			$('.tips_title').toggle(function(){
+				$('.tips').show();
+			},function(){
+				$('.tips').hide();
+			});
+		});	
+	</script>
+    <style type="text/css">
+        *{margin: 0; padding: 0;}
+        html{font-family: Arial, Microsoft YaHei, sans-serif;}
+        body{margin: 0; padding: 0;}
+        img{display: block; border: none; width: 100%;}
+        a{-webkit-tap-highlight-color: rgba(0,0,0,0);}
+        #outBox{width: 100%; max-width: 640px; margin: 0 auto; overflow: hidden; padding-bottom: 3%; position: relative;}
+        #rule{display: block; text-decoration: underline; outline: none; float: right; margin: 3% 0 5% 0; color: #595757; font-size: 0.8rem;}
+        .content-ray{width: 94%; margin: 0 auto;}
+		.bgm1{width: 100%;background: url(images/map_mb_01.png);}
+		.bgm2{width: 100%;background: url(images/map_mb_03.png);}
+		
+        .slogan{font-size: 1.45rem;color:#8e6f32;text-align: center;margin-bottom: 6%;}
+        .slogan_title{border-bottom: 1px solid #8e6f32;width: 70px;margin: 0 auto;padding-top:7%;margin-bottom: 5%;}
+        .slogan span{color:#004187;}		
+		
+		.brand_intro{background-color: #002a54; color: #ffffff; font-size: 1.2rem; line-height: 28px;}
+        .brand_intro .brand_text{padding: 8% 6% 6% 6%;}
+		.brand_intro .brand_text .brand_text1{font-size: 1.45rem;color:#8e6f32; font-weight: bold;margin-bottom: 8%;}
+		.brand_intro .brand_text p{margin-bottom: 4%;}
+		.brand_intro .brand_text a{font-size: 1rem;;text-decoration: none;color: #ffffff;}
+		.brand_text{position: relative;}
+		.brand_img1{position: absolute;bottom: 14.5%; left: 35%;}
+		.brand_img2{position: absolute;bottom: 12.5%; left: 35%;}
+		.content_one{margin-bottom: 5%;}
+		.brand_margin{margin-bottom: 3%!important;}
+		.line{border-bottom: 1px solid #8e6f32;height: 2.2rem;width: 91%;margin-bottom: 2%;}
+		
+		.title{margin-top: 10%;margin-bottom: 14%;}
+		.content_two{background: #8e6f32;color: #ffffff;position: relative;margin-bottom: 5%;}
+		.content_two a{color: #ffffff;text-decoration: none;font-size: 1rem;}
+		.content_txt{padding: 8% 5%;}
+		.content_txt h2{margin-bottom: 3%;}
+		.content_txt p{line-height: 2rem;margin-bottom: 5%;font-size: 1.2rem;}
+		.content_txt p.last{margin-bottom: 0;}
+		.content_img{position: absolute;bottom: 11%;left: 28%;}
+		
+		.tips_title{color: #ffffff;text-align: center;padding: 5% 0;background-color: #666666;font-size: 1.2rem;position: relative;}
+		.tip_img{position: absolute;top: 46%;left: 65%;}
+		.tips{width: 90%; font-size: 1rem;color: #a5a5a5;margin-top: 8%;margin-bottom: 8%;line-height: 30px;display: none;padding-left: 7%;padding-right: 7%;}
+		.tips a{color: #a5a5a5;}
+		.img1{width: 35%;position: absolute;right: 0;top: 17.5%;}
+		.img2{width: 40%;position: absolute;top: 61%;}
+		
+    </style>
+</head>
+<body>
+<div id="outBox">    
+    <img src="images/southern_airlines_mb_01.jpg" alt="16万南航里程  海外机票随心兑" width="750" style="display:block;border:none;">
+	<a href="/sim/ICARD/cardoffer.htm">
+		<img src="images/southern_airlines_mb_02.jpg" alt="16万南航里程  海外机票随心兑" width="750" style="display:block;border:none;">
+	</a>
+	
+<div class="bgm1">
+    <div class="content-ray">       
+		<div class="slogan slogan_title">
+			<p>活动时间</p>
+		</div>
+        <div class="slogan">
+            <p>即日起至2019年12月31日</p>
+            <p>优惠名额限量100份</p>
+        </div>  
+		<img src="images/southern_airlines_mb_09.png" alt="" class="img1">
+		<div class="content_one">
+			<img src="images/southern_airlines_mb_05.jpg" alt="">
+			<div class="brand_intro">
+				<div class="brand_text">
+					<h2 class="brand_text1">立享6万南航明珠俱乐部里程！</h2>
+					<p>立即成为花旗财富管理客户，且持续4个月满足合格花旗财富管理账户标准。</p>
+					<a href="">了解更多活动详情</a>
+					<img class="brand_img1" src="images/arrow.png" alt="" style="width: 2%;">
+				</div>
+			</div>
+		</div>
+		<div class="content_one">
+			<img src="images/southern_airlines_mb_08.jpg" alt="">
+			<div class="brand_intro">
+				<div class="brand_text">
+					<h2 class="brand_text1 brand_margin">最高可享10万花旗礼程！</h2>
+					<div class="line">
+						<p>10万花旗礼程可兑换10万南航明珠俱乐部里程！</p>
+					</div>
+					<p>持续满足合格花旗财富管理账户标准且持有花旗礼程卡信用卡。</p>							
+					<a href="">了解更多活动详情</a>
+					<img class="brand_img2" src="images/arrow.png" alt="" style="width: 2%;">
+				</div>
+			</div>
+		</div>		
+        <div class="clear"></div>		
+	</div>
+</div>
+	
+<div class="bmg2">
+	<div class="content-ray"> 	
+		<div class="slogan title">
+            <p>花旗银行客户更可尊享</p>
+        </div> 
+		<img src="images/southern_airlines_mb_10.png" alt="" class="img2">
+		<div class="content_two">
+			<img src="images/icon_01.png" alt="" style="width: 8%;margin: 0 auto;padding: 5% 0;">
+			<img src="images/line_02.png" alt="" style="width: 90%; padding-left: 5%;">		
+			<div class="content_txt">
+				<h2>环球旅行 伴您左右</h2>
+				<p>海外机场中文免费接送机，在境外既安心又省心<br>
+					全球ATM免费取现，让出国真的说走就走<br>
+					海外紧急援助现金，一解你的燃眉之急<br>
+					全球速汇通，瞬间到账让爱零距离
+				</p>
+				<a href="#">了解更多详情</a>
+				<img class="content_img" src="images/arrow_01.png" alt="" style="width: 2%;">
+			</div>
+		</div>
+		<div class="content_two">
+			<img src="images/icon_02.png" alt="" style="width: 8%;margin: 0 auto;padding: 5% 0;">
+			<img src="images/line_02.png" alt="" style="width: 90%;padding-left: 5%;">		
+			<div class="content_txt">
+				<h2>财富管理 由您诠释</h2>
+				<p>代理境外理财—海外基金系列<br>
+				多币种定期存款<br>
+				个人大额存单<br>
+				代销保险
+				</p>
+				<a href="#">了解更多详情</a>
+				<img class="content_img" src="images/arrow_01.png" alt="" style="width: 2%;">
+			</div>
+		</div>
+		<div class="slogan title">
+              <p>更多活动详情，欢迎咨询<br>花旗24小时服务热线 400-821-1880</p>
+        </div>
+    </div>
+</div>
+
+	<div class="innerbox">
+		<div class="tips_title">
+			<span>活动规则与条款</span>
+			<img src="images/arrow_02.png" alt="" style="width: 4%" class="tip_img">
+		</div>
+		<div class="tips">
+			<ol>
+				<li>活动时间：2019年1月1日起至2019年12月31日（含起讫日）</li>
+				<li>参与商户：中国南方航空股份有限公司</li>
+				<li>活动对象：仅限于在活动期间通过南方航空官方微信、南方航空官方网站等等商户活动专属链 接申请并开立花旗财富管理账户的客户参加。本活动不与其它优惠活动同享。已持有花旗银行 借记卡账户或曾在花旗银行关户的客户不可参与此活动。</li>
+				<li>活动适用范围：仅适用于花旗银行位于北京、上海、广州、深圳、杭州、成都、重庆、大连的分支机构。</li>
+				<li>活动规则：在活动期间，客户通过活动专属链接成为合格花旗财富管理客户，且满足合格花旗 财富管理账户标准连续满4 个月，该客户可在商户获得60000南航明珠里程。南航明珠里程具 体使用规则以商户公布为准。</li>
+				<li>奖励发放：对于符合活动条件的客户，商户将在其满足活动条件后的三个月内将商户礼品发送至客户在申请参与活动时通过专属链接预留的南航明珠俱乐部会员卡号中(如南航明珠俱乐部 会员卡号变更，客户应及时通知银行，以免影响礼品领取)。礼品具体使用方法和使用规则以 商户公布为准，花旗银行不对与礼品及其使用相关的事项提供任何保证或承担任何责任。</li>
+				<li>合格花旗财富管理账户标准：指当月综合账户总额日平均余额不低于人民币100万元(或等值外币)。综合账户总额日均余额的计算为:同一客户号码项下的所有个人及联名账户(联名账户的账户余额仅计入主账户人 名下)当月内每日存款、投资及指定保险产品的累积余额*的总和，除以当月实际天数得到的 平均数。指定保险产品包含非投资连结及投资连结的保险产品。<br>*非投资连结保险产品的累积余额为已缴保险费；投资连结的保险产品的累积余额为保单当月的余额。</li>
+				<li>新开户的花旗财富管理客户在开户后可享受6个月的缓冲期(“缓冲期”)。该缓冲期内本行 将不收取账户管理费(开户当月即视为第一个月)，缓冲期结束后将按照届时最新的费率表中 的账户管理费收费标准进行收费。详情请登录花旗网上银行查阅个人银行业务费率表<a href="https://www.citibank.com.cn/sim/chinese/static/rates_fees.htm">https://www.citibank.com.cn/sim/chinese/static/rates_fees.htm</a> 。</li>
+				<li>本活动礼品不可兑换现金或换取其他优惠，不可转让予其他人。</li>
+				<li>客户如有任何虚假交易、违法交易、不正常交易等情况，或财富管理账户在非正常状态(如销 户账户和被冻结账户)，花旗银行有权取消其参加本活动的资格。如客户在活动期间或获得活 动优惠后发生任何欺诈或恶意套取活动优惠等行为，我行有权取消其获得优惠的资格，并从其 在我行的任何银行卡和/或账户中扣除与其所获得的优惠等值金额的款项。</li>
+				<li>本活动中有关商品或服务由相关商户提供。除适用法律另有规定外，花旗银行不负责与礼品质 量、使用、维修及版权有关的事宜，任何有关礼品的产品质量、使用、维修及版权之责任由商户承担。客户应自行决定是否使用该商户提供的商品或服务，并应自行承担使用该商品或服务 的后果。若客户因使用有关商品或服务引起任何损害的，客户应自行直接接洽该商户予以处理 和解决。除适用法律另有规定外，花旗银行不对该商户提供的商品或服务的质量提供任何保证 或承担任何责任，但会视具体情况提供必要协助。</li>
+				<li>在法律允许的范围内，花旗银行有权解释、修改本活动规则、暂停或提前终止本活动。本活动任何未尽事宜仍受《金融产品及服务条款和条件》以及其他相关文件约束。</li>
+				<li>本条款所述“花旗”或“银行”或“花旗银行”均指花旗银行（中国）有限公司。</li>
+			</ol>
+		</div>
+	</div>   
+       
+
+</div>
+
+<div style="display:none;">
+    <div id="inline1" style="padding: 1%;">
+        <h2 style="margin: 2% 0; padding: 0;">规则条款：</h2>
+        <ol style="margin: 0; padding: 0; margin-left: 8%;">
+			    <li>花旗银行（中国）有限公司（下称“花旗银行”或“花旗”）的花旗至享卡人民币卡、花旗礼程卡人民币卡及花旗礼享卡人民币卡的主卡及附属卡持卡人（下称“花旗信用卡持卡人”），均可参加本活动。</li>
+				<li>即日起至2019年12月31日（含起讫日）之间，花旗信用卡持卡人至Zeta Villa合作门店，出示花旗信用卡或使用花旗信用卡全额结清本活动涉及的项目费用，方可享受相应优惠。</li>
+				<li>除特别注明外，本活动不可与其他优惠、折扣或优惠券同时使用。不可转让予其他人，不可兑换现金或换取其他优惠。</li>
+				<li>本活动中有关商品、赠品或服务由Zeta Villa提供，持卡人应当自行决定是否使用其提供的商品、赠品或服务。花旗银行不对Zeta Villa在本活动中所提供的任何商品、赠品质量或服务水平等提供任何保证，在法律法规允许的范围内，花旗银行亦不就Zeta Villa提供的商品、赠品或服务引起的投诉、争议或任何损害承担任何责任。对此，花旗信用卡持卡人应与Zeta Villa直接联系处理解决。</li>
+				<li>在法律法规允许的范围内，花旗银行有权修改本活动规则，暂停、终止本活动或调整相同价值的礼品。</li>
+				<li>本活动未尽事宜，仍同时受 “花旗礼赏世界积分奖励计划条款细则”、《花旗银行信用卡(个人卡)章程》、《花旗银行信用卡(个人卡)领用合约》、《花旗至享卡一般条款与细则》及其他相关文件约束。</li>
+        </ol>
+    </div>
+</div>
+
+<div id="popup" style="display:none; overflow:hidden;">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr align="left" valign="top">
+            <td style="font-size:12px;font-family:Arial;"><span style="color:#06c">您即将离开花旗网站，前往第三方网站。</span><br>
+                You are now entering a third party site.</td>
+        </tr>
+        <tr align="left" valign="top">
+            <td class="font">&nbsp;</td>
+        </tr>
+        <tr align="left" valign="top">
+            <td style="line-height:150%;font-size:12px;font-family:Arial;"><span style="color:#06c">所有您在第三方网站提交的信息将由该网站依据其隐私、保密和安全条款执行并负责。</span><br>
+                All information you provide there will be subject to privacy, confidentiality, and security terms of the applicable third party site.</td>
+        </tr>
+        <tr align="left" valign="top">
+            <td class="font">&nbsp;</td>
+        </tr>
+
+        <tr align="left" valign="top">
+            <td class="font"><hr size="1" color="CCCCCC" width="100%"></td>
+        </tr>
+        <tr align="center" valign="top">
+            <td class="font">
+                <a id="popuplink" href="#" onClick="javascript:$.fancybox.close();" target="_blank" class="button" style="float:left;margin-left:20%;font-family:Arial;font-size:9pt;font-weight:bolder;color:#fff;width:40px;height:12pt;background-color:#009;border:1px solid #09f;display:block;padding-top:1px; margin-top: 10px;">Yes</a>
+                <a href="javascript:$.fancybox.close();" class="button" style="float:right;margin-right:20%;font-family:Arial;font-size:9pt;font-weight:bolder;color:#fff;width:40px;height:12pt;background-color:#009;border:1px solid #09f;display:block;padding-top:1px; margin-top: 10px;">No</a>
+            </td>
+        </tr>
+    </table>
+</div>
+
+<script type="text/javascript">
+    function gup(name) {
+        name = name.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
+        var regexS = "[\\?&]"+name+"=([^&#]*)";
+        var regex = new RegExp( regexS );
+        var results = regex.exec( window.location.href );
+        if( results == null )
+            return "";
+        else
+            return results[1];
+    }
+
+    var threeIs=gup('threePart');
+
+    $(function(){
+        if(threeIs=="Y"){
+            setTimeout(function(){
+                $('.popup_alert').click();
+            },500);
+        }
+    })
+</script>
+
+<script type="text/javascript" src="/sim/chinese/js/SC_code1.js"></script>
+<script type="text/javascript" src="/sim/chinese/js/page_code.js"></script>
+</body>
+</html>
