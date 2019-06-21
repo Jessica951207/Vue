@@ -1,0 +1,54 @@
+@charset "utf-8";
+
+/*---------- reset ----------*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td{border:0; outline:0; font-size:100%; vertical-align:baseline; background:transparent; margin:0; padding:0}article, aside, canvas, figure, figure img, figcaption, hgroup, footer, header, nav, section, audio, video{display:block}ul, li, ol{list-style:none; background:transparent}h1, h2, h3, h4, h5, h6{font-weight:400; clear:both}a, a:hover{text-decoration:none}
+blockquote{quotes:none}blockquote:before, blockquote:after, q:before, q:after{content:none}table{border-collapse:collapse; border-spacing:0}input[type="submit"]:focus, input[type="button"]:focus{outline:none}:focus{outline:0}a img, input[type="submit"]::-moz-focus-inner, input[type="button"]::-moz-focus-inner{border:0}
+html, body {width:100%;height:100%;}
+body{font-family:Arial, Microsoft YaHei, sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}
+.clear{background:none; border:0; clear:both; display:block; float:none; font-size:0; overflow:hidden; visibility:hidden; width:0; height:0; margin:0; padding:0}
+input,a{outline:none;}
+
+.transform(@transform){
+  -webkit-transform: @transform;
+  -moz-transform: @transform;
+  -ms-transform: @transform;
+  -o-transform: @transform;
+  transform: @transform;
+}
+.transition(@arguments) {
+  -webkit-transition: @arguments;
+  -moz-transition: @arguments;
+  -o-transition: @arguments;
+  -ms-transition: @arguments;
+  transition: @arguments;
+}
+.box_position(@horizontal, @vertical) {
+  -webkit-box-pack: @horizontal;
+  -moz-box-pack: @horizontal;
+  -ms-flex-pack: @horizontal;
+  box-pack: @horizontal;
+  -webkit-box-align: @vertical;
+  -moz-box-align: @vertical;
+  -ms-flex-align: @vertical;
+  box-align: @vertical;
+}
+
+.display_box() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: box;
+}
+.clear{clear: both;}
+*{-webkit-tap-highlight-color: rgba(0,0,0,0)}
+img{display: block; width: 100%; border: none;}
+.setbox{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+[v-cloak]{
+  display: none;
+}
+/*清除ie的默认选择框样式清除，隐藏下拉箭头*/
+select::-ms-expand { display: none; }

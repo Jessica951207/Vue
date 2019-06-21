@@ -1,0 +1,392 @@
+@import "_basic";
+@imagePath:'../images/';
+
+html{
+  font-size: 16px;
+  background: #f7f7f7;
+}
+.mb_show{display: none;}
+*{margin: 0; padding: 0;}
+body{font-family: Arial, Microsoft YaHei, sans-serif;}
+img{
+  display: block;
+  border: none;
+}
+a{
+  text-decoration: none;
+  color: #4d4d4d;
+}
+.clear{clear: both;}
+
+
+#out_box{max-width: 1280px; width: 100%; margin: 0 auto;color: #4d4d4d;}
+
+.content{
+  width: 78%;
+  max-width: 1000px;
+  margin: 0 auto;
+  #data_form{
+    position: relative;
+    margin-top: -1.5rem;
+    .basic_area{
+      width: 94%;
+      margin: 0 auto;
+      z-index: 1;
+      background: #FFFfff;
+      box-shadow: 0.1px 10px 10px -1px #e5e5e5 ,0.1px 10px 10px -1px #e5e5e5;
+      margin-bottom: 3%;
+      .basic {
+        width: 90%;
+        margin: 0 auto;
+        overflow: hidden;
+        padding: 3% 0;
+        .border_none {
+          border-bottom: none !important;
+        }
+        .basic_item {
+          display: block;
+          padding: 2% 0;
+          width: 100%;
+          border-bottom: 1px solid #f2f2f2;
+
+          .button{display: none;}
+
+          .one_title{
+            padding-top: 1%;
+          }
+          .basic_title {
+            display: inline-block;
+            width: 18%;
+            font-size: 0.8rem;
+            font-weight: bold;
+            float: left;
+          }
+          .basic_right{
+            float: left;
+            width: 80%;
+            .item_radio {
+              margin: 2% 0;
+            }
+            .spec_item{
+              display: inline-block;
+              width: 15%;
+            }
+            .area_item{
+              display: inline-block;
+              width: 15%;
+              margin: 1% 0;
+              .radio_pic{
+                display: none;
+              }
+            }
+          }
+
+          .line{
+            width: 3%;
+            display: inline-block;
+            padding-bottom: 4px;
+          }
+
+          .item_data {
+            width: 18%;
+            height: 2rem;
+            font-size: 0.8rem;
+            line-height: 2rem;
+            border: 1px solid #dfdfe0;
+            margin-top: 0.2rem;
+            padding: 0 0.4rem;
+          }
+
+          .item_select {
+            /*很关键：将默认的select选择框样式清除*/
+            appearance: none;
+            -moz-appearance: none;
+            -webkit-appearance: none;
+            background: #f4f4f5;
+          }
+
+          select[disabled] {
+            background: #f2f2f2 url("@{imagePath}icon.png") no-repeat 96% 50%;
+            color: #a0a0a0;
+          }
+
+          input[disabled] {
+            background: #f2f2f2;
+            color: #a0a0a0;
+          }
+
+          input[disabled]::-webkit-input-placeholder {
+            color: #a0a0a0;
+          }
+
+          .item_input {
+            background: #f4f4f5;
+          }
+
+          .unit {
+            font-size: 0.8rem;
+            position: absolute;
+            right: 0.4rem;
+            bottom: 0.5rem;
+            color: #adadad;
+          }
+
+        }
+      }
+    }
+  }
+
+  .brand_box{
+    width: 94%;
+    margin: 0 auto;
+    margin-bottom: 2%;
+    .brand{
+      width: 24%;
+      margin-left: 1.3%;
+      float: left;
+      position: relative;
+      margin-bottom: 2%;
+      &:nth-child(4n+1){margin-left: 0}
+      .hot_icon{
+        position: absolute;
+        width: 30%;
+        top: -2px;
+        right: -2px;
+      }
+      .brand_info{
+        padding: 4% 0 0 4% ;
+        box-shadow: -2px 3px 10px -1px #e5e5e5 ,2px 3px 10px -1px #e5e5e5;
+        .brand_title{
+          color: #000000;
+          font-size: 1rem;
+          font-weight: bold;
+          margin: 3% 0;
+        }
+        .identify{
+          padding: 10% 0;
+          .brand_icon{
+            display: inline-block;
+            width: 10%;
+          }
+          .brand_iden{
+            color: #d5b345;
+            font-size: 0.8rem;
+            vertical-align: super;
+          }
+        }
+      }
+    }
+
+  }
+
+  .page{
+    width: 94%;
+    margin: 0 auto;
+    overflow: hidden;
+    margin-top: 3%;
+    margin-bottom: 5%;
+    .page_info{
+      cursor: pointer;
+      float: right;
+      .page_pic{
+        width: auto;
+        display: inline-block;
+      }
+    }
+  }
+
+}
+
+.footer{
+  width: 100%;
+  background: #FFFfff;
+  img{
+    width: auto;
+    margin: 0 auto;
+  }
+}
+
+
+
+
+
+@media screen and (max-width: 750px){
+  .pc_show{display: none;}
+  .mb_show{display: block;}
+  html{font-size: 3.75vw}
+  img{width: 100%;}
+
+  .mask{
+   display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top:0;
+    left: 0;
+    background: rgba(0,0,0,0.7);
+    z-index: 1;
+  }
+
+  .top{
+    position: relative;
+    z-index: 99;
+    background: #FFFfff;
+    padding: 3% 0;
+    font-size: 1rem;
+    font-weight: bold;
+    width: 100%;
+    margin: 0 auto;
+    display: flex!important;
+    justify-content: space-between;
+    .top_item{
+      width: 25%;
+      text-align: center;
+      .top_icon{
+        width: auto;
+        display: inline-block;
+      }
+    }
+  }
+
+  .content{
+    width: 100%;
+    #data_form{
+      color: #808080;
+      position: absolute;
+      padding-top: 2%;
+      z-index: 99;
+      width: 100%;
+      .basic_area{
+        width: 100%;
+        box-shadow: none;
+        .basic{
+          width: 90%;
+          margin: 0 auto;
+          padding: 0;
+
+          .basic_item_one,.basic_item_two,.basic_item_three,.basic_item_four{
+            padding-top: 10%;
+            display: none;
+          }
+          .basic_item_two{
+            border-bottom: 1px solid #f2f2f2;
+            padding-top: 0;
+          }
+          .basic_item{
+            border-bottom: none;
+            text-align: center;
+
+            .first_title{
+              display: block!important;
+              width: 100%;
+              font-size: 1rem;
+              text-align: left;
+              color: #808080;
+              margin-bottom: 2%;
+            }
+            .item_right{
+            }
+            .basic_right{
+              width: 100%;
+              .area_item{
+                width: 25%;
+                margin-left: 5%;
+                background: #f1f1f1;
+                border-radius: 4px;
+                text-align: center;
+                position: relative;
+                padding: 2% 0;
+                .area_radio{
+                  opacity: 0;
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  width: 100%;
+                  height: 100%;
+                }
+                .radio_pic{
+                  display: none;
+                  position: absolute;
+                  top: 9px;
+                  left: 7px;
+                  width: 16%;
+                }
+              }
+              .spec_item{
+                display: flex;
+                justify-content: space-between;
+                border-bottom: 1px solid #f2f2f2;
+                width: 100%;
+                padding-top:3%!important;
+                /*.specific{
+                  display: inline-block;
+                }*/
+                .item_radio{
+                  float: right;
+                }
+              }
+            }
+            .line{
+              width: 7%;
+            }
+            .item_select{display: inline-block;}
+            .item_data{
+              width: 40%;
+              height: 2.7rem;
+              font-size: 1rem;
+            }
+            .button{
+              margin: 0 auto;
+              margin-top:12%;
+              margin-bottom: 8%;
+              background: #999999;
+              padding: 3%;
+              text-align: center;
+              color: #FFFfff;
+              display: block;
+            }
+            .blue{
+              background: #273d5d;
+            }
+          }
+
+          .border_none{
+            text-align: left;
+          }
+        }
+      }
+    }
+    .brand_box{
+      float: none;
+      width: 100%;
+      .brand{
+        background: #FFFfff;
+        padding: 3%;
+        width: 92%;
+        &:nth-child(4n+1){margin-left: 1.3%}
+        .brand_pic{
+          width: 40%;
+          float: left;
+        }
+        .brand_info{
+          float: left;
+          box-shadow: none;
+        }
+        .brand_title{
+          font-size: 1.2rem;
+        }
+        .hot_icon{
+          width: 10%;
+          left: 8.2rem;
+          top: 0.65rem;
+        }
+      }
+    }
+
+
+  }
+
+
+
+
+}
