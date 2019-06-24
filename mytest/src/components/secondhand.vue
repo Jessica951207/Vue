@@ -267,14 +267,14 @@
         pageSize: 8,
         pageTotal:1,
         empty:false,
-        a:'http://www.scaniaclub.com.cn'
+        a:'https://www.scaniaclub.com.cn'
 
       }
     },
     mounted() {
       this.requestBase();
-      this.getData();
       this.assignment();
+      this.getData();
       this.loadData();
       this.requestCars();
       this.$nextTick(function () {
@@ -320,7 +320,6 @@
             $('.area_item span').css('color', '#808080');
             $(this).css('background', '#ccd3df').find('.radio_pic').show();
             $(this).find('span').css('color', '#00235f');
-            console.log(1);
           });
         }
       },
@@ -403,6 +402,7 @@
         }else {
           this.empty = false;
         }
+
         //console.log('123123123',data)
 
         /*车辆八个一组*/
@@ -420,8 +420,7 @@
         this.requestCars();
         var nav = this.selectedNum + '-' + this.selectedLastNum + '-' + this.selectTime + '-' + this.selectLastTime + '-' + this.specifica + '-' + this.emission + '-' + this.area + '-' + this.currentPage;
         this.$router.push({path: '/', query: {navinfo: nav}});
-
-        /*console.log(this.$route.query.navinfo);*/
+        //console.log(this.$route.query.navinfo);
 
         this.submit = false;
         this.FirstBlue = false;
@@ -446,16 +445,18 @@
         }
       },
       assignment() {
-        var assignArr = this.$route.query.navinfo.split('-');
-        this.selectedNum = assignArr[0];
-        this.selectedLastNum = assignArr[1];
-        this.selectTime = assignArr[2];
-        this.selectLastTime = assignArr[3];
-        this.specifica = assignArr[4];
-        this.emission = assignArr[5];
-        this.area = assignArr[6];
-        this.currentPage = assignArr[7];
-        //console.log('8888888888',assignArr)
+        if(this.$route.query.navinfo){
+          var assignArr = this.$route.query.navinfo.split('-');
+          this.selectedNum = assignArr[0];
+          this.selectedLastNum = assignArr[1];
+          this.selectTime = assignArr[2];
+          this.selectLastTime = assignArr[3];
+          this.specifica = assignArr[4];
+          this.emission = assignArr[5];
+          this.area = assignArr[6];
+          this.currentPage = assignArr[7];
+          //console.log('8888888888',assignArr);
+        }
       },
       handleSizeChange(size) {
         this.pageSize = size;
@@ -489,7 +490,7 @@
       },*/
 
       clickItem(item) {
-        console.log('我打印的item',item);
+        //console.log('我打印的item',item);
         this.$router.push({
           path: '/car',
           query: {id: item.id}

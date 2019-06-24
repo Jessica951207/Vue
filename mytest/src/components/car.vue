@@ -40,15 +40,15 @@
             <div class="contact pc_show">
               <div class="contact_left">
                 <p class="contact_title">销售联络人</p>
-                <p>姓名：{{infomation.sale.name}}</p>
-                <p>手机号码：{{infomation.sale.tel}}</p>
-                <p class="email">邮箱：{{infomation.sale.email}}</p>
+                <p v-if="exist.salename">姓名：{{infomation.sale.name}}</p>
+                <p v-if="exist.saletel">联系方式：{{infomation.sale.tel}}</p>
+                <p v-if="exist.saleemail" class="email">邮箱：{{infomation.sale.email}}</p>
               </div>
               <div class="contact_right">
                 <p class="contact_title">经销商信息</p>
-                <p>姓名：{{infomation.agency.name}}</p>
-                <p>手机号码：{{infomation.agency.tel}}</p>
-                <p class="email">地址：{{infomation.agency.address}}</p>
+                <p v-if="exist.agencyname">{{infomation.agency.name}}</p>
+                <p v-if="exist.agencytel">联系方式：{{infomation.agency.tel}}</p>
+                <p v-if="exist.agencyaddress" class="email">地址：{{infomation.agency.address}}</p>
               </div>
             </div>
           </div>
@@ -75,7 +75,7 @@
                 <p class="top_title">{{infomation.carDetail.stand}}</p>
                 <p class="top_info">排放标准</p>
               </div>
-              <div class="item_info">
+              <div class="item_info" v-if="exist.prodtime">
                 <p class="top_title">{{infomation.carDetail.prodtime}}</p>
                 <p class="top_info">生产时间</p>
               </div>
@@ -95,59 +95,59 @@
         <div class="bgm">
           <div class="tab">
             <table cellpadding="0" cellspacing="0" border="0" width="100%">
-              <tr>
+              <tr v-if="exist.prodtime">
                 <td><span class="mb_show">生产时间</span></td>
                 <td><span class="mb_show">{{infomation.carDetail.prodtime}}</span></td>
               </tr>
-              <tr>
+              <tr v-if="exist.drivekm">
                 <td>行驶公里</td>
                 <td>{{infomation.carDetail.drivekm}}</td>
               </tr>
-              <tr>
+              <tr v-if="exist.apptype">
                 <td>应用类型</td>
                 <td>{{infomation.carDetail.apptype}}</td>
               </tr>
-              <tr>
+              <tr v-if="exist.licensetime">
                 <td>首次上牌时间</td>
                 <td>{{infomation.carDetail.licensetime}}</td>
               </tr>
-              <tr>
+              <tr v-if="exist.city">
                 <td>当前落户城市</td>
                 <td>{{infomation.carDetail.city}}</td>
               </tr>
-              <tr>
+              <tr v-if="exist.cab">
                 <td>驾驶室</td>
                 <td>{{infomation.carDetail.cab}}</td>
               </tr>
-              <tr>
+              <tr v-if="exist.retarder">
                 <td>液力缓速器</td>
                 <td>{{infomation.carDetail.retarder}}</td>
               </tr>
-              <tr>
+              <tr v-if="exist.wheelbase">
                 <td>轴距</td>
                 <td>{{infomation.carDetail.wheelbase}}</td>
               </tr>
-              <tr>
+              <tr v-if="exist.chanum">
                 <td>底盘号</td>
                 <td>{{infomation.carDetail.chanum}}</td>
               </tr>
-              <tr>
+              <tr v-if="exist.engmod">
                 <td>发动机型号</td>
                 <td>{{infomation.carDetail.engmod}}</td>
               </tr>
-              <tr>
+              <tr v-if="exist.maxpow">
                 <td>最大马力</td>
                 <td>{{infomation.carDetail.maxpow}}</td>
               </tr>
-              <tr>
+              <tr v-if="exist.rearaxlerate">
                 <td>速比</td>
                 <td>{{infomation.carDetail.rearaxlerate}}</td>
               </tr>
-              <tr>
+              <tr v-if="exist.brakes">
                 <td>制动类型</td>
                 <td>{{infomation.carDetail.brakes}}</td>
               </tr>
-              <tr>
+              <tr v-if="exist.remark">
                 <td>备注</td>
                 <td>{{infomation.carDetail.remark}}</td>
               </tr>
@@ -160,9 +160,9 @@
           <div class="tab">
             <div class="contact">
               <p class="contact_title">销售联络人</p>
-              <p>姓名：{{infomation.sale.name}}</p>
-              <p>手机号码：{{infomation.sale.tel}}</p>
-              <p>邮箱：{{infomation.sale.email}}</p>
+              <p v-if="exist.salename">姓名：{{infomation.sale.name}}</p>
+              <p v-if="exist.saletel">联系方式：{{infomation.sale.tel}}</p>
+              <p v-if="exist.saleemail">邮箱：{{infomation.sale.email}}</p>
             </div>
           </div>
         </div>
@@ -170,9 +170,9 @@
           <div class="tab">
             <div class="contact">
               <p class="contact_title">销售联络人</p>
-              <p>姓名：{{infomation.agency.name}}</p>
-              <p>手机号码：{{infomation.agency.tel}}</p>
-              <p>地址：{{infomation.agency.address}}</p>
+              <p v-if="exist.agencyname">{{infomation.agency.name}}</p>
+              <p v-if="exist.agencytel">联系方式：{{infomation.agency.tel}}</p>
+              <p v-if="exist.agencyaddress">地址：{{infomation.agency.address}}</p>
             </div>
           </div>
         </div>
@@ -253,7 +253,33 @@
             },
             infoData:{},
             arrows:true,
-            a:'http://www.scaniaclub.com.cn'
+            a:'https://www.scaniaclub.com.cn',
+            exist:{
+              salename:true,
+              saletel:true,
+              saleemail:true,
+              agencyname:true,
+              agencytel:true,
+              agencyaddress:true,
+              mod:true,
+              spec:true,
+              stand:true,
+              prodtime:true,
+              drivekm:true,
+              apptype:true,
+              licensetime:true,
+              city:true,
+              cab:true,
+              retarder:true,
+              wheelbase:true,
+              chanum:true,
+              engmod:true,
+              maxpow:true,
+              rearaxlerate:true,
+              brakes:true,
+              remark:true,
+            }
+
           }
       },
       mounted() {
@@ -273,6 +299,82 @@
           this.infomation.carDetail = data.data.detail;
           this.infomation.sale = data.data.sale;
           this.infomation.agency = data.data.dealer;
+          if(this.infomation.carDetail.retarder == true){
+            this.infomation.carDetail.retarder = '有';
+          }else {
+            this.infomation.carDetail.retarder = '无';
+          }
+
+          if(this.infomation.sale.name == ''){
+            this.exist.salename = false
+          }
+          if(this.infomation.sale.tel == ''){
+            this.exist.saletel = false
+          }
+          if(this.infomation.sale.email == ''){
+            this.exist.saleemail = false
+          }
+          if(this.infomation.agency.name == ''){
+            this.exist.agencyname = false
+          }
+          if(this.infomation.agency.tel == ''){
+            this.exist.agencyname = false
+          }
+          if(this.infomation.agency.address == ''){
+            this.exist.agencyaddress = false
+          }
+          if(this.infomation.carDetail.mod == ''){
+            this.exist.mod = false
+          }
+          if(this.infomation.carDetail.spec == ''){
+            this.exist.spec = false
+          }
+          if(this.infomation.carDetail.stand == ''){
+            this.exist.stand = false
+          }
+          if(this.infomation.carDetail.prodtime == ''){
+            this.exist.prodtime = false
+          }
+          if(this.infomation.carDetail.drivekm == ''){
+            this.exist.drivekm = false
+          }
+          if(this.infomation.carDetail.apptype == ''){
+            this.exist.apptype = false
+          }
+          if(this.infomation.carDetail.licensetime == ''){
+            this.exist.licensetime = false
+          }
+          if(this.infomation.carDetail.cab == ''){
+            this.exist.cab = false
+          }
+          if(this.infomation.carDetail.retarder == ''){
+            this.exist.retarder = false
+          }
+          if(this.infomation.carDetail.wheelbase == ''){
+            this.exist.wheelbase = false
+          }
+          if(this.infomation.carDetail.chanum == ''){
+            this.exist.chanum = false
+          }
+          if(this.infomation.carDetail.engmod == ''){
+            this.exist.engmod = false
+          }
+          if(this.infomation.carDetail.city == ''){
+            this.exist.city = false
+          }
+          if(this.infomation.carDetail.maxpow == ''){
+            this.exist.maxpow = false
+          }
+          if(this.infomation.carDetail.rearaxlerate == ''){
+            this.exist.rearaxlerate = false
+          }
+          if(this.infomation.carDetail.brakes == ''){
+            this.exist.brakes = false
+          }
+          if(this.infomation.carDetail.remark == ''){
+            this.exist.remark = false
+          }
+
           this.$nextTick(function () {
             this.createSwiper();
             this.isShowsArrows();
